@@ -1,0 +1,17 @@
+"Modern Python from Alternate Universes"
+
+
+Purpose:
+    About modern Python techniques inspired by other languages.
+    Don't tell people how to do stuff, just present ideas to inspire.
+
+
+Topics:
+    Type hints for general static typing. The basics, numbers, containers, etc.
+    Parameterising things on types (like C++ templates or Java generics).
+    Type var bounds (like Java/C++ generics constraints).
+    Deduced self type (like C++ CRTP? or C++23 deduced this. Or Scala and OCaml self?).
+    Using type arguments at runtime? (Like C++ templates or C# reified generics).
+    Protocols (like C++ concepts/constraints. Or OCaml, Go).
+    Pattern matching for returning error values (like Erlang, Elixir).
+    Dataclasses? Simple immutable types plus type hinting support.
