@@ -1,24 +1,21 @@
-from typing import TypeVar
 from abc import ABC, abstractmethod
+from typing import TypeVar
 
 
-TDerived = TypeVar('TDerived', bound='BasePrinter')
+TDerived = TypeVar('TDerived', bound='Printer')
 
 
-class BasePrinter(ABC):
-    def print(self: TDerived, message: str) -> TDerived:
-        self._write(message)
-        return self
-
+class Printer(ABC):
     def print_line(self: TDerived, message: str) -> TDerived:
-        return self.print(message + '\n')
+        self._write(message + '\n')
+        return self
 
     @abstractmethod
     def _write(self, message: str) -> None:
         raise NotImplementedError()
 
 
-class StdoutPrinter(BasePrinter):
+class StdoutPrinter(Printer):
     def print_fancy(self, message: str) -> 'StdoutPrinter':
         return self.print_line(f'~~~ {message} ~~~')
 
@@ -27,4 +24,4 @@ class StdoutPrinter(BasePrinter):
 
 
 printer = StdoutPrinter()
-printer.print('hello').print_line(' world').print_fancy('CRTP works!')
+printer.print_line('hello world').print_fancy('Deduced self works!')

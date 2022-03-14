@@ -10,7 +10,7 @@ Topics:
     Type hints for general static typing. The basics, numbers, containers, etc.
     Parameterising things on types (like C++ templates or Java generics).
     Type var bounds (like Java/C++ generics constraints).
-    Deduced self type (like C++ CRTP? or C++23 deduced this. Or Scala and OCaml self?).
+    Deduced self type (like C++ CRTP? or C++23 deduced this. Or Scala, OCaml, Rust self?).
     Using type arguments at runtime? (Like C++ templates or C# reified generics).
     Protocols (like C++ concepts/constraints. Or OCaml, Go).
     Pattern matching for returning error values (like Erlang, Elixir).

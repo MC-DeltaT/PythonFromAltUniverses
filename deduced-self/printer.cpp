@@ -1,24 +1,19 @@
-#include <concepts>
 #include <iostream>
 #include <string>
 
 
 template<class Derived>
-class BasePrinter {
+class Printer {
 public:
-    Derived const& print(std::string const& message) const {
-        auto const& derived = static_cast<Derived const&>(*this);
-        derived._write(message);
-        return derived;
-    }
-
     Derived const& print_line(std::string const& message) const {
-        return print(message + "\n");
+        auto const& derived = static_cast<Derived const&>(*this);
+        derived._write(message + "\n");
+        return derived;
     }
 };
 
 
-class StdoutPrinter : public BasePrinter<StdoutPrinter> {
+class StdoutPrinter : public Printer<StdoutPrinter> {
 public:
     void print_fancy(std::string const& message) const {
         print_line("~~~ " + message + " ~~~");
@@ -32,5 +27,5 @@ public:
 
 int main() {
     StdoutPrinter const printer;
-    printer.print("hello").print_line(" world").print_fancy("CRTP works!");
+    printer.print_line("hello world").print_fancy("CRTP works!");
 }
