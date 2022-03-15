@@ -2,11 +2,11 @@ from abc import ABC, abstractmethod
 from typing import TypeVar
 
 
-TDerived = TypeVar('TDerived', bound='Printer')
+TPrinter = TypeVar('TPrinter', bound='Printer')
 
 
 class Printer(ABC):
-    def print_line(self: TDerived, message: str) -> TDerived:
+    def print_line(self: TPrinter, message: str) -> TPrinter:
         self._write(message + '\n')
         return self
 

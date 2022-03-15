@@ -1,13 +1,14 @@
+from dataclasses import dataclass
 from typing import Generic, Optional, TypeVar
 
 
 T = TypeVar('T')
 
 
+@dataclass
 class StackNode(Generic[T]):
-    def __init__(self, value: T, next_node: Optional['StackNode[T]']) -> None:
-        self.value = value
-        self.next_node = next_node
+    value: T
+    next_node: Optional['StackNode[T]']
 
 
 class Stack(Generic[T]):
@@ -19,7 +20,7 @@ class Stack(Generic[T]):
 
     def pop(self) -> T:
         if self.head is None:
-            raise ValueError('List is empty')
+            raise ValueError('Stack is empty')
         else:
             value = self.head.value
             self.head = self.head.next_node
