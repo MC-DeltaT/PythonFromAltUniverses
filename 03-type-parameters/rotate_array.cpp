@@ -16,7 +16,7 @@ std::vector<T> rotate_array_left(std::vector<T> const& array, unsigned rotation)
 
 
 int main() {
-    std::vector<std::string> const strings{"is", "cool", "hello", "world!", "C++"};
+    std::vector<std::string> const strings{"is", "cool", "hello", "world!", "c++"};
     auto const strings_rotated = rotate_array_left(strings, 2);
     for (auto const& s : strings_rotated) {
         std::cout << s << std::endl;
