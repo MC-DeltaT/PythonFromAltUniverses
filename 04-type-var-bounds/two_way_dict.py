@@ -24,6 +24,6 @@ class TwoWayDict(Generic[THashable1, THashable2]):
 two_way_dict: TwoWayDict[int, str] = TwoWayDict()
 two_way_dict.insert(42, 'foo')
 v1 = two_way_dict.get_by_key1(42)
-print(v1)
+print(v1 + 'bar')
 v2 = two_way_dict.get_by_key2('foo')
-print(v2)
+print(v2 + 13)

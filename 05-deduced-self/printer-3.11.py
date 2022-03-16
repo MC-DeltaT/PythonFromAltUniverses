@@ -21,4 +21,4 @@ class StdoutPrinter(Printer):
 
 
 printer = StdoutPrinter()
-printer.print_line('hello world').print_fancy('Deduced self works!')
+printer.print_line('hello world').print_fancy('Self type works!')
