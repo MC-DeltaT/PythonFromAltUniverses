@@ -1,7 +1,16 @@
-abstract class Item(public val id: Int, public val name: String, public val value: Double)
+abstract class Item(
+    public val id: Int,
+    public val name: String,
+    public val value: Double
+)
 
 
-class Potion(id: Int, name: String, value: Double, public val healAmount: Double) : Item(id, name, value)
+class Potion(
+    id: Int,
+    name: String,
+    value: Double,
+    public val healAmount: Double
+) : Item(id, name, value)
 
 
 fun <T: Item> sortItems(items: List<T>): List<T>

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from datetime import datetime
+from pprint import pprint
 
 
 @dataclass
@@ -28,4 +29,4 @@ project = Directory('PythonFromAltUniverses',
 )
 
 print(project.subdirectories[0].files[0].name)
-print(project)
+pprint(project)

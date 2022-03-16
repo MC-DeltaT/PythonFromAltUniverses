@@ -1,6 +1,6 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from datetime import date
-from typing import Optional
+from pprint import pprint
 
 
 @dataclass(frozen=True)
@@ -10,7 +10,7 @@ class Address:
     suburb: str
     street: str
     house_number: int
-    unit_number: Optional[int] = None
+    unit_number: int | None = None
 
 
 @dataclass
@@ -21,7 +21,11 @@ class Person:
 
 addressbook: dict[Address, list[Person]] = {}
 
-address = Address('Australia', 'WA', 'Perth', 'Francis St', 25)
+address1 = Address('Australia', 'WA', 'Baywater', 'Guildford Rd', 25)
 person = Person('Foo Bar', date(2022, 3, 1))
-addressbook[address] = [person]
-print(addressbook)
+addressbook[address1] = [person]
+
+address2 = replace(address1, house_number=26)
+addressbook[address2] = [person]
+
+pprint(addressbook)
