@@ -1,0 +1,24 @@
+c++:
+    templates
+    concepts/constraints
+    value types
+    conpile-time programming
+    static typing
+
+c#:
+    null operators
+    events
+
+kotlin:
+    null operators
+    context functions
+    dataclasses
+
+elixir:
+    pattern matching
+    immutability
+    async, processes, message passing
+
+rust:
+    memory management
+    traits

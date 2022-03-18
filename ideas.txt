@@ -10,8 +10,9 @@ Topics:
     1 - Type hints for general static typing. The basics, numbers, containers, etc.
     2 - Dataclasses. Simple immutable types plus type hinting support. (Like C structs)
     3 - Parameterising things on types (like C++ templates or Java generics).
-    Function param specs?
+    Function param specs? (like C++ variadic templates)
     4 - Type var bounds (like Java/C# generics constraints).
     5 - Deduced self type (like C++ CRTP, or C++23 deduced this. Or Scala, OCaml, Rust self type).
     6 - Protocols (like C++ concepts/constraints. Or OCaml, Go structural subtyping).
     Pattern matching for returning error values (like Erlang, Elixir).
+    Context managers [assertions, timers, scope guards?]
