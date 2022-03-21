@@ -4,9 +4,6 @@
 #include <string>
 
 
-namespace chrono = std::chrono;
-
-
 template<typename T>
 concept Named = requires (T const& t) {
     { t.name } -> std::same_as<std::string const&>;
@@ -15,7 +12,7 @@ concept Named = requires (T const& t) {
 
 struct Person {
     std::string name;
-    chrono::year_month_day dob;
+    std::chrono::year_month_day dob;
 };
 
 
@@ -25,6 +22,8 @@ void print_name(Named auto const& named) {
 
 
 int main() {
-    Person const person{"Foo Bar", {chrono::year{2022}, chrono::month{3}, chrono::day{16}}};
+    using namespace std::chrono;
+
+    Person const person{"Foo Bar", 2022y/3/16};
     print_name(person);
 }

@@ -4,18 +4,18 @@ from typing import TypeVar
 
 
 @dataclass
-class Item(ABC):
+class GameItem(ABC):
     id: int
     name: str
     value: float
 
 
 @dataclass
-class Potion(Item):
+class Potion(GameItem):
     heal_amount: float
 
 
-TItem = TypeVar('TItem', bound=Item)
+TItem = TypeVar('TItem', bound=GameItem)
 
 
 def sort_items(items: list[TItem]) -> list[TItem]:

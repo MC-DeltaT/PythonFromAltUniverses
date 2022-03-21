@@ -3,7 +3,7 @@ from pathlib import Path
 
 
 class AssertFilesystemUnmodified:
-    def __init__(self, *paths: PathLike[str]) -> None:
+    def __init__(self, *paths: str | PathLike[str]) -> None:
         self.paths = tuple(map(Path, paths))
 
     def __enter__(self) -> 'AssertFilesystemUnmodified':

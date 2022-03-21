@@ -18,14 +18,16 @@ class ScopeTimer:
     def _process_time(self) -> None:
         assert self.start_time is not None
         assert self.end_time is not None
-        elapsed_time = self.end_time - self.start_time
-        print(f'ScopeTimer name={self.name} time={elapsed_time}ns')
+        elapsed_time_ns = self.end_time - self.start_time
+        print(f'ScopeTimer "{self.name}" took {elapsed_time_ns}ns')
 
 
-def expensive_function():
-    n = 1_000_000
-    with ScopeTimer('expensive_function'):
-        sum(x ** 3 for x in range(1, n))
+def database_query():
+    ...
+    with ScopeTimer('database query'):
+        # Send query to database
+        ...
+    ...
 
 
-expensive_function()
+database_query()

@@ -1,4 +1,4 @@
-abstract class Item(
+abstract class GameItem(
     public val id: Int,
     public val name: String,
     public val value: Double
@@ -10,10 +10,10 @@ class Potion(
     name: String,
     value: Double,
     public val healAmount: Double
-) : Item(id, name, value)
+) : GameItem(id, name, value)
 
 
-fun <T: Item> sortItems(items: List<T>): List<T>
+fun <T: GameItem> sortItems(items: List<T>): List<T>
     = items.sortedWith(compareBy({ it.name }, { -it.value }))
 
 
