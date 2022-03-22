@@ -3,7 +3,7 @@ from typing import Literal
 
 
 Ok = Literal['ok']
-Error = Literal ['error']
+Error = Literal['error']
 
 Timeout = Literal['timeout']
 

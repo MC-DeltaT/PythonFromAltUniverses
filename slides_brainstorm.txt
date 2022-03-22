@@ -1,0 +1,116 @@
+Type Hints
+    Alternate universe concept: Static typing
+    Alternate universe sources: C, Java, Haskell, Scala, countless other compiled languages
+    Available from Python version: 3.5
+    Description: Annotate code with "hints" for static analysis tool
+    Key uses:
+        - everywhere!
+    Highlights:
+        - catch bugs earlier
+        - confidence that code is safe
+        - enhanced readability
+    Lowlights:
+        - some constructs can't be statically typed
+        - tooling isn't perfect
+        - more effort
+
+
+Type hint features
+
+    General type hint stuff
+        No need to explain?
+
+    Generics for built in collections
+        Available from Python version: 3.9
+
+    Union | operator
+        Available from Python version: 3.10
+
+    Type parameters
+        Alternate universe concept: Generics
+        Alternate universe sources: Java, C#, C++
+        Available from Python version: 3.5
+        Description: Parameterise functions and classes by types
+        Key uses:
+            - generic data structures
+            - generic algorithms
+
+        Type parameter bounds?
+
+        Parameter specifications
+            Alternate universe concept: Variadic generics
+            Available from Python version: 3.10
+            Description: Statical analysis for manipulating arbitrary function signatures
+            Key uses:
+                - function wrappers/decorators
+            Lowlights:
+                - limited parameter manipulation capabilities
+
+    Protocols
+        Alternate universe concept: Structural subtyping
+        Alternate universe sources: OCaml, Go, C++
+        Available from Python version: 3.8
+        Description: Statically analysable ad-hoc interface implementation
+        Key uses:
+            - specifying commonly used interfaces
+        Highlights:
+            - simple interfaces
+            - easily extendable interfaces
+        Lowlights:
+            - less explicit
+
+    Deduced self type
+        Alternate universe concept: Self type
+        Alternate universe sources: Scala, OCaml, Rust, C++
+        Available from Python version: 3.5 (manual), 3.11 (built-in)
+        Description: Statically capturing derived type in base class
+        Key uses:
+            - mixins
+            - method chaining
+
+
+Context managers:
+    Alternate universe concept: RAII
+    Alternate universe sources: C++
+    Available from Python version: 2.5
+    Description: Scope-based deterministic setup/teardown
+    Key uses:
+        - resource management
+        - other scope-based actions
+    Highlights:
+        - more powerful than C++ RAII?! (Exception handling)
+
+
+Dataclasses
+    Alternate universe concept: Record/struct types
+    Alternate universe sources: Haskell, C++, C#, Kotlin, many functional languages
+    Available from Python version: 3.7
+    Description: Automatically generated record types
+    Key uses:
+        - functional programming
+        - procedural programming
+    Highlights:
+        - simple & concise code
+        - immutable data types
+        - flexible & customisable
+        - mostly statically analysable
+    Lowlights:
+        - not 100% statically analysable
+
+
+Return codes
+    Alternate universe concept: Return values
+    Alternate universe sources: Erlang, Elixir
+    Available from Python version: 3.10
+    Description: Return values and pattern matching for errors
+    Key uses:
+        - functional programming
+    Highlights:
+        - explicit error modes
+        - explicit control flow
+        - sometimes nicer error handling
+        - statically analysable
+    Lowlights:
+        - pattern matching isn't powerful enough currently
+        - no Elixir "with" expression
+        - static analysis tooling isn't great currently

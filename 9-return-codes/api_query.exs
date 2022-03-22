@@ -20,7 +20,7 @@ end
 @type api_data() :: String.t()
 
 
-@spec api_query() :: {:ok, api_data()} | {:error, :timeout} | {:error, HTTPError.t()}
+@spec api_query() :: {:ok, api_data()} | {:error, :timeout | HTTPError.t()}
 def api_query do
   ...
 end

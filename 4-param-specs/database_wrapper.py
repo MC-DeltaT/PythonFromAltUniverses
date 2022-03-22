@@ -11,6 +11,7 @@ class DatabaseConnection:
 
 
 def with_database(func: Callable[Concatenate[DatabaseConnection, P], T]) -> Callable[P, T]:
+    # Note P does not include DatabaseConnection
     @wraps(func)
     def inner(*args: P.args, **kwargs: P.kwargs) -> T:
         database_connection = DatabaseConnection()
