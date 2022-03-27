@@ -22,20 +22,23 @@ APIData = str
 
 def api_query() -> tuple[Ok, APIData] | tuple[Error, Timeout | HTTPError]:
     ...
+    # return 'ok', 'some data'
+    # return 'error', 'timeout'
+    # return 'error', HTTPError(404, 'Not found')
 
 
 match api_query():
-    case (Ok, data):
+    case ('ok', data):
         print(f'Got API data: {data}')
-    case (Error, Timeout):
+    case ('error', Timeout):
         print('Network timeout, retrying...')
         ...
-    case (Error, HTTPError(status_code=code)):
+    case ('error', HTTPError(status_code=code)):
         print(f'Got HTTP error code {code}')
 
 
 match api_query():
-    case (Ok, data):
+    case ('ok', data):
         print(f'Got API data: {data}')
-    case (Error, reason):
+    case ('error', reason):
         print(f'Failed to query API: {reason}')

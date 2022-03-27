@@ -40,7 +40,7 @@ Type hint features
         Parameter specifications
             Alternate universe concept: Variadic generics
             Available from Python version: 3.10
-            Description: Statical analysis for manipulating arbitrary function signatures
+            Description: Static analysis for manipulating arbitrary function signatures
             Key uses:
                 - function wrappers/decorators
             Lowlights:
@@ -67,18 +67,6 @@ Type hint features
         Key uses:
             - mixins
             - method chaining
-
-
-Context managers:
-    Alternate universe concept: RAII
-    Alternate universe sources: C++
-    Available from Python version: 2.5
-    Description: Scope-based deterministic setup/teardown
-    Key uses:
-        - resource management
-        - other scope-based actions
-    Highlights:
-        - more powerful than C++ RAII?! (Exception handling)
 
 
 Dataclasses

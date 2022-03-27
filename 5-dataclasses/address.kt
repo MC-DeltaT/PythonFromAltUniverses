@@ -16,7 +16,7 @@ data class Person(
 
 
 fun main() {
-    val addressbook = mutableMapOf<Address, List<Person>>()
+    val addressbook = hashMapOf<Address, List<Person>>()
     val address1 = Address("Australia", "WA", "Baywater", "Guildford Rd", 25)
     val person = Person("Foo Bar", LocalDate.of(2022, 3, 1))
     addressbook[address1] = listOf(person)
