@@ -30,7 +30,7 @@ def api_query() -> tuple[Ok, APIData] | tuple[Error, Timeout | HTTPError]:
 match api_query():
     case ('ok', data):
         print(f'Got API data: {data}')
-    case ('error', Timeout):
+    case ('error', 'timeout'):
         print('Network timeout, retrying...')
         ...
     case ('error', HTTPError(status_code=code)):

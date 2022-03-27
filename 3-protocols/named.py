@@ -1,4 +1,3 @@
-from dataclasses import dataclass
 from datetime import date
 from typing import Protocol
 
@@ -9,10 +8,10 @@ class Named(Protocol):
         raise NotImplementedError()
 
 
-@dataclass
 class Person:
-    name: str
-    dob: date
+    def __init__(self, name: str, dob: date) -> None:
+        self.name = name
+        self.dob = dob
 
 
 def print_name(named: Named) -> None:

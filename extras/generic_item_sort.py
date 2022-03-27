@@ -1,18 +1,18 @@
 from abc import ABC
-from dataclasses import dataclass
 from typing import TypeVar
 
 
-@dataclass
 class GameItem(ABC):
-    id: int
-    name: str
-    value: float
+    def __init__(self, id: int, name: str, value: float) -> None:
+        self.id = id
+        self.name = name
+        self.value = value
 
 
-@dataclass
 class Potion(GameItem):
-    heal_amount: float
+    def __init__(self, id: int, name: str, value: float, heal_amount: float) -> None:
+        super().__init__(id, name, value)
+        self.heal_amount = heal_amount
 
 
 TItem = TypeVar('TItem', bound=GameItem)

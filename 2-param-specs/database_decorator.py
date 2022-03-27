@@ -22,6 +22,7 @@ def with_database(func: Callable[Concatenate[DatabaseConnection, P], T]) -> Call
 
 @with_database
 def get_users(database_connection: DatabaseConnection, country: str) -> ...:
+    print(f'db={database_connection}, {country=}')
     ...
 
 

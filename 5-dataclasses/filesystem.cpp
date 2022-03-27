@@ -21,7 +21,7 @@ int main() {
     Directory const project{"PythonFromAltUniverses",
         {},
         {
-            Directory{"2-dataclasses",
+            Directory{"5-dataclasses",
                 {
                     File{"filesystem.py", 1647339391.0},
                     File{"address.py", 1647339402.0, true}
