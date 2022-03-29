@@ -1,6 +1,6 @@
 #include <iostream>
-#include <utility>
 #include <ranges>
+#include <utility>
 #include <vector>
 
 
@@ -20,8 +20,5 @@ void use_size(R&& range) {
 
 
 int main() {
-    auto const t1 = std::ranges::views::iota(0LL, 1'000'000'000LL)
-        | std::ranges::views::transform([](auto x) { return x + 1; });
-    auto const t2 = t1 | std::ranges::views::transform([](auto x) { return x * 2; });
-    use_size(t2);
+    use_size(std::ranges::views::iota(0LL, 1'000'000'000LL));
 }
