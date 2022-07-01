@@ -61,12 +61,13 @@ Type hint features
 
     Deduced self type
         Alternate universe concept: Self type
-        Alternate universe sources: Scala, OCaml, Rust, C++
+        Alternate universe sources: Typescript, Scala, Rust, C++
         Available from Python version: 3.5 (manual), 3.11 (built-in)
         Description: Statically capturing derived type in base class
         Key uses:
-            - mixins
             - method chaining
+            - fluent interfaces
+            - factory classmethods
 
 
 Dataclasses

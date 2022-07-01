@@ -2,7 +2,7 @@ c++:
     templates
     concepts/constraints
     value types
-    conpile-time programming
+    compile-time programming
     static typing
 
 c#:
